@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rpg</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        background-color: black;
+        color: rgba(255, 255, 255, 0.87);
+        height: 100%;
+        margin: 0;
+      }
+
+      .game-text {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 20px;
+        height: 400px;
+        width: 300px;
+        overflow: auto;
+        scroll-behavior: smooth;
+      }
+
+      .game-over {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+      .game-over-text {
+        font-size: 300px;
+        text-align: center;
+        font-weight: 700;
+        background: -webkit-linear-gradient(-90deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .game-over-text-mask {
+        height: 0%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        transition: height 2s ease-out;
+      }
+
+      .game-over--animate .game-over-text-mask {
+        height: 100%;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameUi" class="">
+      <h1>Rpg</h1>
+      <div id="beginAdventure">
+        <p>What is the name of the hero for this great adventure?</p>
+        <input id="nameInput" type="text" maxlength="20" />
+        <button id="startButton">Begin Adventure</button>
+      </div>
+      <div id="gameText" class="game-text"></div>
+      <div id="battleUI" class="hidden">
+        <div id="battleHero">
+          <h2 id="battleHeroName"></h2>
+          <div>
+            <span id="battleHeroHp"></span> /
+            <span id="battleHeroMaxHp"></span>
+          </div>
+          <div>Gold: <span id="battleRiches"></span></div>
+        </div>
+      </div>
+    </div>
+    <!--Finish game over function-->
+    <div id="gameOverUi" class="game-over hidden">
+      <div class="game-over-text-mask">
+        <div class="game-over-text">GAME<br />OVER</div>
+      </div>
+    </div>
+
+    <script src="models/battleManager.js"></script>
+    <script src="models/button.js"></script>
+    <script src="models/character.js"></script>
+    <script src="models/localization.js"></script>
+    <script src="models/party.js"></script>
+    <script src="resources/characters.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
