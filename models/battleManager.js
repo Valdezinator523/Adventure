@@ -34,7 +34,7 @@ class BattleManager {
         const deathBlowMessage = this.getDeathBlowAttackMessage(target, attacker);
         this.attack(target, attacker, deathBlowMessage);
       }
-      // TODO Implement a "instant death" message of sorts that displays when something dies in one hit
+      // TODO Consider implementing a "instant death" message of sorts that displays when something dies in one hit
       // TODO Add a critical hit system that displays that the character had a moment of sheer display of skill
       target.health = 0;
       if (!isDeathBlow) {
