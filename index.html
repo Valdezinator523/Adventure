@@ -60,7 +60,10 @@
       <h1>Rpg</h1>
       <div id="beginAdventure">
         <p>What is the name of the hero for this great adventure?</p>
-        <input id="nameInput" type="text" maxlength="20" />
+        <div><input id="nameInput" type="text" maxlength="20" /></div>
+        <div>
+          <select id="raceInput"></select>
+        </div>
         <button id="startButton">Begin Adventure</button>
       </div>
       <div id="gameText" class="game-text"></div>
@@ -84,6 +87,7 @@
 
     <script src="models/battleManager.js"></script>
     <script src="models/button.js"></script>
+    <script src="models/race.js"></script>
     <script src="models/character.js"></script>
     <script src="models/localization.js"></script>
     <script src="models/party.js"></script>

@@ -12,14 +12,16 @@ const heroes = [
     initiative: 2,
     isDead: false,
     controlledBy: "player",
-    id: 0,
+    race: {
+      name: RaceName.Human,
+    },
   }),
 ];
 
 const enemies = [
   new Character({
-    // TODO: rename type to race
-    type: "goblin",
+    // TODO: Make a separate race property
+    type: "greedy goblin",
     name: "Gragnok",
     party: "Bad",
     health: 10,
@@ -32,11 +34,13 @@ const enemies = [
     initiative: 3,
     isDead: false,
     controlledBy: "ai",
-    id: 1,
     gold: 15,
+    race: {
+      name: RaceName.Goblin,
+    },
   }),
   new Character({
-    type: "rat",
+    type: "giant rat",
     name: "Remmy",
     party: "Bad",
     health: 4,
@@ -49,11 +53,13 @@ const enemies = [
     initiative: 1,
     isDead: false,
     controlledBy: "ai",
-    id: 2,
     gold: 2,
+    race: {
+      name: RaceName.Rodent,
+    },
   }),
   new Character({
-    type: "troll",
+    type: "lesser troll",
     name: "Jeff",
     party: "Bad",
     health: 20,
@@ -66,7 +72,9 @@ const enemies = [
     initiative: 4,
     isDead: false,
     controlledBy: "ai",
-    id: 3,
     gold: 25,
+    race: {
+      name: RaceName.Troll,
+    },
   }),
 ];

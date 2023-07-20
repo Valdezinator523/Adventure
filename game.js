@@ -41,6 +41,19 @@ const game = {
 // TODO: Make an option for what the font of the games text should be
 const beginAdventure = document.getElementById("beginAdventure");
 
+//set up race input
+const raceInput = document.getElementById("raceInput");
+const raceOptions = Object.values(HeroRaceName).map((heroRaceName) => {
+  const option = document.createElement("option");
+  option.setAttribute("label", heroRaceName);
+  option.setAttribute("value", heroRaceName);
+  return option;
+});
+
+raceOptions.forEach((raceOption) => {
+  raceInput.appendChild(raceOption);
+});
+
 const startButton = document.getElementById("startButton");
 const onStartButtonClick = () => {
   const nameInput = document.getElementById("nameInput");
