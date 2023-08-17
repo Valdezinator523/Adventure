@@ -9,8 +9,9 @@ const hide = (element) => {
 const game = {
   enemies: enemies,
 
-  start: (name) => {
+  start: (name, race) => {
     game.heroes[0].name = name;
+    game.heroes[0].race.name = race;
     game.log("Game Started");
     const battleManager = new BattleManager(game, game.heroes, game.enemies);
     battleManager.start();
@@ -31,7 +32,7 @@ const game = {
     gameOverUi: document.getElementById("gameOverUi"),
   },
   heroes: heroes,
-  // TODO: permanently display parties current gold
+  //Permanently display parties current gold
   party: new Party({
     gold: 100,
   }),
@@ -58,7 +59,9 @@ const startButton = document.getElementById("startButton");
 const onStartButtonClick = () => {
   const nameInput = document.getElementById("nameInput");
   const name = nameInput.value;
+  const raceInput = document.getElementById("raceInput");
+  const race = raceInput.value;
   beginAdventure.style.display = "none";
-  game.start(name);
+  game.start(name, race);
 };
 startButton.addEventListener("click", onStartButtonClick);

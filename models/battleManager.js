@@ -210,6 +210,7 @@ class BattleManager {
         this.updateText(character.name, document.getElementById("battleHeroName"));
         this.updateText(character.health, document.getElementById("battleHeroHp"));
         this.updateText(character.maxHealth, document.getElementById("battleHeroMaxHp"));
+        this.updateText(character.race.name, document.getElementById("battleHeroRace"));
       }
 
       let partyIsDead = false;

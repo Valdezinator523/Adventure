@@ -6,7 +6,7 @@ const HeroRaceName = {
   Orc: "Orc",
   Goblin: "Goblin",
 };
-//NEXT ON AGENDA assign chosen race to heroes attributes
+
 const RaceName = {
   ...HeroRaceName,
   Troll: "Troll",
