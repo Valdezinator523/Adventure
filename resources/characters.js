@@ -20,7 +20,6 @@ const heroes = [
 
 const enemies = [
   new Character({
-    // TODO: Make a separate race property
     type: "greedy goblin",
     name: "Gragnok",
     party: "Bad",
